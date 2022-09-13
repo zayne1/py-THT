@@ -36,9 +36,11 @@ This will always launch the Python 3 interpreter.
 
 
 # Setup - Installing Python (Windows):
-```
-not recommended
-```
+
+1. Open your web browser and navigate to the Downloads for Windows section of the official Python website.
+2. Search for Python3
+3. Select a link to download either the Windows x86-64 executable installer or Windows x86 executable installer
+4. For all recent versions of Python, the recommended installation options include *Pip* and *IDLE*. Older versions might not include such additional features.
 
 # Executing script
 ```
