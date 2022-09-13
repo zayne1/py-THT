@@ -1,6 +1,16 @@
 # Python Magic Squares THT
 A Python script allowing user to enter the size of a square, of which a magic squre will be calculated
 
+Background:
+
+A magic square is a square grid of distinct numbers such that each row and column add up to the same number. Further, the two diagonals (from corner to corner) also add up to that number.
+An example is the 3x3 magic square (from [Wikipedia](https://en.wikipedia.org/wiki/Magic_square#Magic_constant)) which is shown below: 
+
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Magicsquareexample.svg/220px-Magicsquareexample.svg.png) 
+
+Note how the arrows indicate the sum of each row, column, and diagonal. For the purposes of this task we will only be looking at creating a magic square (n x n matrix) where n is odd, e.g. 3x3, 5x5, etc. This is due to the approaches being slightly different depending on the value of n. 
+
+
 # Setup - Installing Python (Linux):
 To see which version of Python 3 you have installed, open a command prompt and run
 
