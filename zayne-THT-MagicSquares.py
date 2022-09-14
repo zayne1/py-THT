@@ -5,8 +5,20 @@
 # Possibly refactor all of this into a Class, so that it can be imported
 # as a module.
 
-# Create multi dimensional representation of magic square box, to size
 def create_list(box_size):
+    """
+    Create multi dimensional representation of magic square box, to size
+    
+    Args:
+      box_size: length of a row of our multi dimensional array
+    
+    Returns:
+      Multi dimensional array list to size of param
+      
+    Raises:
+      none
+    """
+
     x = [[] for y in range(box_size)]
     
     for y in range(box_size):
@@ -17,11 +29,40 @@ def create_list(box_size):
 
 
 def check_is_top_row(cur_row):
+    """
+    Check if we are at top row of our multi dimensional array
+    
+    Args:
+      cur_row: current row of of our multi dimensional array
+    
+    Returns:
+      True or nothing
+      
+    Raises:
+      none
+    """
+
     if cur_row == 0:
         return True
 
 
 def check_top_right_field_empty(cur_row, cur_col,list,box_size):
+    """
+    Check if to right field is empty, of our multi dimensional array, relative to our current pos
+    
+    Args:
+      cur_row: current row of of our multi dimensional array
+      cur_col: current col of of our multi dimensional array
+      list: our multi dimensional array
+      box_size: length of a row of our multi dimensional array
+    
+    Returns:
+      True of False
+      
+    Raises:
+      none
+    """
+
     if check_is_top_row(cur_row) or check_at_right_border(cur_col, box_size):
         return False
     elif bool(list[max(0, cur_row-1)][min(box_size-1, cur_col+1)]):
@@ -31,16 +72,59 @@ def check_top_right_field_empty(cur_row, cur_col,list,box_size):
 
 
 def check_at_right_border(cur_col, box_size):
+    """
+    Check if we are at right most row of our multi dimensional array
+    
+    Args:
+      cur_col: current col of of our multi dimensional array
+      box_size: length of a row of our multi dimensional array
+    
+    Returns:
+      True or nothing
+      
+    Raises:
+      none
+    """
+
     if cur_col == (box_size - 1):
         return True
 
 
 def check_bottom_field_empty(cur_row, cur_col, list, box_size):
+    """
+    Check if the bottom field is empty, of our multi dimensional array, relative to our current pos
+    
+    Args:
+      cur_row: current row of of our multi dimensional array
+      cur_col: current col of of our multi dimensional array
+      list: our multi dimensional array
+      box_size: length of a row of our multi dimensional array
+    
+    Returns:
+      True or nothing
+      
+    Raises:
+      none
+    """
+
     if not bool(list[min(box_size-1, cur_row+1)][cur_col]):
         return True
 
-# display
+
 def print_magic_square(list):
+    """
+    Display magic square
+    
+    Args:
+      list: our multi dimensional array
+    
+    Returns:
+      terminal output of magic square
+      
+    Raises:
+      none
+    """
+
     print("\r\n\r\n\r\n")
     print('    ███╗░░░███╗░█████╗░░██████╗░██╗░█████╗░  ░██████╗░██████╗░██╗░░░██╗░█████╗░██████╗░███████╗░██████╗')
     print('    ████╗░████║██╔══██╗██╔════╝░██║██╔══██╗  ██╔════╝██╔═══██╗██║░░░██║██╔══██╗██╔══██╗██╔════╝██╔════╝')
@@ -74,6 +158,21 @@ def print_magic_square(list):
 
 
 def validate(magic_constant, list, box_size):
+    """
+    Validate if our box is a magic square
+    
+    Args:
+      magic_constant: magic constant of our user's input
+      list: our multi dimensional array
+      box_size: length of a row of our multi dimensional array
+    
+    Returns:
+      True or False
+      
+    Raises:
+      none
+    """
+
     counter=0
     colCount=0
     rowCount=0
